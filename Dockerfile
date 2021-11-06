@@ -3,7 +3,7 @@
 #
 FROM maven:3.6.0-jdk-11-slim AS build
 WORKDIR /App
-COPY src ./App/src
+COPY src ./App/
 COPY pom.xml ./App/
 RUN mvn -f ./App/pom.xml clean package
 
